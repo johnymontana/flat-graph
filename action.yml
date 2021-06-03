@@ -1,0 +1,28 @@
+name: "Flat Graph"
+description: "Load data into Neo4j using Cypher. Designed to work with the flat Github action"
+inputs:
+  neo4j-user:
+    description: "Username for Neo4j"
+    required: true
+    default: "neo4j"
+  neo4j-password:
+    description: "Password for Neo4j"
+    required: true
+    default: "letmein"
+  neo4j-uri:
+    description: "Connection string for Neo4j"
+    required: true
+    default: "bolt://localhost:7687"
+  filename:
+    description: "The name of the flat file to load"
+    required: true
+    default: data.json
+  cypher-query:
+    description: "The Cypher query to run. Your JSON file will be passed in a variable $value"
+    required: true
+outputs:
+  records:
+    description: "The number of records"
+runs:
+  using: "node12"
+  main: "dist/index.js"
