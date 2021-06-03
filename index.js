@@ -15,16 +15,15 @@ const driver = neo4j.driver(
 );
 
 const loadData = async () => {
-  const session = driver.session();
+  const session = driver.session({ defaultAccessMode: neo4j.session.WRITE });
   try {
     const jsonData = JSON.parse(fs.readFileSync(FILENAME));
 
-    const writeResult = await session.writeTransaction((tx) => {
-      tx.run(CYPHER_QUERY, { value: jsonData });
-    });
-    writeResult.records.forEach((record) => {
-      console.log(record);
-    });
+    const tx = session.beginTransaction();
+
+    const result = await tx.run(CYPHER_QUERY, { value: jsonData });
+    result.records.forEach((record) => console.log(record));
+    await tx.commit();
   } catch (error) {
     core.setFailed(error.message);
   } finally {
