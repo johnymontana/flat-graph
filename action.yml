@@ -26,3 +26,7 @@ outputs:
 runs:
   using: "node12"
   main: "dist/index.js"
+author: "William Lyon"
+branding:
+  icon: "database"
+  color: "blue"
