@@ -1,5 +1,5 @@
 name: "Flat Graph"
-description: "Load data into Neo4j using Cypher. Designed to work with the flat Github action"
+description: "Load data into Neo4j using Cypher. Designed to work with the Flat Data GitHub action"
 inputs:
   neo4j-user:
     description: "Username for Neo4j"
