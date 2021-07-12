@@ -8,7 +8,7 @@
 
 # Flat Graph GitHub Action
 
-Flat Graph is a GitHub action designed to be a companion to the [Flat Data GitHub action](https://octo.github.com/projects/flat-data) for regularly scraping data from a URL and enablles import into a Neo4j graph database using on Cypher.
+Flat Graph is a GitHub action designed to be a companion to the [Flat Data GitHub action](https://octo.github.com/projects/flat-data) for regularly scraping data from a URL and enables import into a Neo4j graph database using on Cypher.
 
 ## Why would I want to use this?
 
@@ -96,5 +96,5 @@ The name of the file to be loaded. Currently only JSON is supported. This file w
 
 ### `cypher-query`
 
-The Cypher query to run. Your JSON file will be passed in a veriable `$value`
+The Cypher query to run. Your JSON file will be passed in a variable `$value`
 
