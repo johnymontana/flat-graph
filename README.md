@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://img.shields.io/github/v/release/johnymontana/flat-graph.svg">  
+</p>
+
 # Flat Graph GitHub Action
 
 Flat Graph is a GitHub action designed to be a companion to the [Flat Data GitHub action](https://octo.github.com/projects/flat-data) for regularly scraping data from a URL and enablles import into a Neo4j graph database using on Cypher.
