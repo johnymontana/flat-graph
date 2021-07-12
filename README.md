@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="img/flat-graph.png" width=400>
+</p>
+
+<p align="center">
   <img src="https://img.shields.io/github/v/release/johnymontana/flat-graph.svg">  
 </p>
 
